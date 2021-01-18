@@ -1,0 +1,137 @@
+body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family:'Noto Sans TC', sans-serif;
+}
+
+.pageTop{
+  position: relative;
+  height: 100vh;
+  background: url("image/bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+.pageTop::after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: black;
+  opacity: 0.5;
+}
+
+.pageTop .intro{
+  letter-spacing: 0.5vh;
+  color: #fbfbfb;
+  text-align: center;
+  z-index: 99;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.intro a[target]{
+  color: unset;
+  font-size: 1.5rem;
+}
+
+
+.type{
+  margin: 0 auto;
+  border-right: 2px solid rgba(255,255,255,0.75);
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typewriter 3.5s steps(40) 1s 1 normal both,
+  blinkTextCursor 800ms steps(40) infinite normal; 
+  
+}
+
+@keyframes typewriter{
+  from{
+    width: 0;
+  }
+  to{
+    width: 100%;
+  }
+}
+
+@keyframes blinkTextCursor{
+  from{
+    border-right-color: rgba(255,255,255,0.75);
+  }
+  to{
+    border-right-color: transparent;
+    
+  }
+}
+
+@media screen and (max-width:768px){
+  .type{
+    font-size:1.8rem;
+  }
+}
+@media screen and (max-width:450px){
+  .type{
+    font-size:1.2rem;
+  }
+}
+@media screen and (max-width:300px){
+  .type{
+    font-size:1rem;
+  }
+}
+
+
+
+
+
+.getStart{
+  position: absolute;
+  bottom: 4vh;
+  left: 50%;
+  color: #ccc;
+  animation: start 5s ease infinite;
+  z-index: 99;
+}
+@keyframes start{
+  0%,
+  25%,
+  50%,
+  75%,
+  100%{
+    transform: translate(-50%,0);
+  }
+
+  15%,
+  40%,
+  65%,
+  90%{
+    transform: translate(-50%,25%);
+  }
+}
+.getStart a{
+  text-decoration: none;
+  color: unset;
+}
+.getStart a:hover{
+  animation: shadow 1.2s infinite;
+}
+@keyframes shadow{
+  0%,
+  100%{
+    text-shadow: 0 0 7px white;
+  }
+  50%{
+    text-shadow: 0 0 15px white;
+  }
+}
+
+
+
