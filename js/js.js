@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  $("#menu a").click(function(){
+  $("#menu a, #getStart a").click(function(){
     const theid=$(this).attr("href");
     const val=$(theid).offset().top-$("#myMenu").innerHeight()+1;
 
@@ -18,9 +18,10 @@ $(document).ready(function(){
       // console.log(this)
       
       const 
-      offset=$(this).offset().top,
+      offset=$(this).offset().top
       height=$(this).innerHeight(),
       id=$(this).attr('id')
+      
       if(offset<=nowat && nowat<offset+height){ //目前高度落於該section內
         $('#myMenu a').not(`a[href='#${id}']`).removeClass('active');
         $(`#myMenu a[href='#${id}']`).addClass('active');
@@ -41,13 +42,16 @@ $(document).ready(function(){
     if(screenW>=992){ 
       
       if(nowat < height-offset){ 
-        $("#myMenu").removeClass("bg-dark");
+        $("#myMenu").removeClass("alert-secondary");
+        $("#myMenu").removeClass("bgShadow");
       }else{
-        $("#myMenu").addClass("bg-dark");
+        $("#myMenu").addClass("alert-secondary");
+        $("#myMenu").addClass("bgShadow");
         
       }
     }else{
-      $("#myMenu").addClass("bg-dark");
+      $("#myMenu").addClass("alert-secondary");
+      $("#myMenu").addClass("bgShadow");
 
     }
 

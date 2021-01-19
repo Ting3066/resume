@@ -9,13 +9,27 @@ header .navbar .nav-link,
 header {
   transition: 0.5s ease;
 }
+header .navbar .nav-link{
+  display: inline-block;
+}
+
+header a, header a:hover{
+  color: #777;
+  text-decoration: none;
+  font-weight: bolder;
+
+}
+
+.bgShadow{
+  box-shadow: 0 0 7px #ababab;
+}
 
 header a::after {
   content: "";
   display: block;
   height: 2px;
   width: 0%;
-  background: white;
+  background: #777;
   margin: 5px 0;
   transition: 1s ease;
 }
@@ -27,7 +41,7 @@ header a.active::after {
 .pageTop {
   position: relative;
   height: 100vh;
-  background: url("image/bg.jpg");
+  background: url("../image/bg.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -104,7 +118,7 @@ header a.active::after {
   }
 }
 
-.getStart {
+#getStart {
   position: absolute;
   bottom: 4vh;
   left: 50%;
@@ -128,11 +142,11 @@ header a.active::after {
     transform: translate(-50%, 25%);
   }
 }
-.getStart a {
+#getStart a {
   text-decoration: none;
   color: unset;
 }
-.getStart a:hover {
+#getStart a:hover {
   animation: shadow 1.2s infinite;
 }
 @keyframes shadow {
@@ -146,21 +160,30 @@ header a.active::after {
 }
 
 
-.skill{
-  position: absolute;
-  display: flex;
-  margin:  250px auto;
-  flex-wrap: wrap;
+.title{
+  font-size: 2.5rem;
+  border-bottom: solid;
+  display: inline-block;
 }
 
-.skill .skillcard{
+
+#about, #skill, #education, #experience{
+  font-size: 1.2rem;
+}
+
+
+#skill, #portfolio{
+  background: #fbfbfb;
+}
+
+#skill .skillcard{
   position: relative;
-  width: 250px;
+  max-width: 250px;
   height: 200px;
   margin: 10px;
 }
 
-.skill .skillcard .face{
+#skill .skillcard .face{
   position: absolute;
   top: 0;
   left: 0;
@@ -170,7 +193,7 @@ header a.active::after {
 
 }
 
-.skill .skillcard .face.face1{
+#skill .skillcard .face.face1{
   background:#333;
   display: flex;
   justify-content: center;
@@ -179,18 +202,18 @@ header a.active::after {
   transform-origin: bottom;
 }
 
-.skill .skillcard .face.face1 h3{
+#skill .skillcard .face.face1 h3{
   margin: 10px 0 0;
   color: #fff;
   text-align: center;
   font-size: 1.5em;
 }
-.skill .skillcard:hover .face.face1{
+#skill .skillcard:hover .face.face1{
   transform: translateY(-100%) rotateX(90deg);
   background: #ff0057;
 
 }
-.skill .skillcard .face.face2{
+#skill .skillcard .face.face2{
   background: #f5f5f5;
   display: flex;
   justify-content: center;
@@ -200,7 +223,33 @@ header a.active::after {
   transform: translateY(100%) rotateX(90deg);
   border-bottom: 5px solid darkcyan;
 }
-.skill .skillcard:hover .face.face2{
+#skill .skillcard:hover .face.face2{
   transform: translateY(0) rotateX(0deg);
 
+}
+
+
+
+.timelineBlock{
+  display: flex;
+  margin-bottom: 10px;
+  
+}
+
+.experienceContent, .educationContent{
+  color: #777;
+}
+
+.mainTimeline{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.mainTimeline .timeline{
+  width: 1px;
+  height: 100%;
+  background: #777;
+  margin-top: 5px;
 }
