@@ -1,11 +1,30 @@
-body{
+body {
   width: 100%;
   height: 100%;
   margin: 0;
-  font-family:'Noto Sans TC', sans-serif;
+  font-family: "Noto Sans TC", sans-serif;
 }
 
-.pageTop{
+header .navbar .nav-link,
+header {
+  transition: 0.5s ease;
+}
+
+header a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  background: white;
+  margin: 5px 0;
+  transition: 1s ease;
+}
+
+header a.active::after {
+  width: 100%;
+}
+
+.pageTop {
   position: relative;
   height: 100vh;
   background: url("image/bg.jpg");
@@ -15,19 +34,19 @@ body{
   background-size: cover;
   overflow: hidden;
 }
-.pageTop::after{
+.pageTop::after {
   content: "";
   width: 100%;
   height: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   background: black;
   opacity: 0.5;
 }
 
-.pageTop .intro{
+.pageTop .intro {
   letter-spacing: 0.5vh;
   color: #fbfbfb;
   text-align: center;
@@ -35,64 +54,57 @@ body{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
-.intro a[target]{
+.intro a[target] {
   color: unset;
   font-size: 1.5rem;
 }
 
-
-.type{
+.type {
   margin: 0 auto;
-  border-right: 2px solid rgba(255,255,255,0.75);
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
   white-space: nowrap;
   overflow: hidden;
   animation: typewriter 3.5s steps(40) 1s 1 normal both,
-  blinkTextCursor 800ms steps(40) infinite normal; 
-  
+    blinkTextCursor 800ms steps(40) infinite normal;
 }
 
-@keyframes typewriter{
-  from{
+@keyframes typewriter {
+  from {
     width: 0;
   }
-  to{
+  to {
     width: 100%;
   }
 }
 
-@keyframes blinkTextCursor{
-  from{
-    border-right-color: rgba(255,255,255,0.75);
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
   }
-  to{
+  to {
     border-right-color: transparent;
-    
   }
 }
 
-@media screen and (max-width:768px){
-  .type{
-    font-size:1.8rem;
+@media screen and (max-width: 768px) {
+  .type {
+    font-size: 1.8rem;
   }
 }
-@media screen and (max-width:450px){
-  .type{
-    font-size:1.2rem;
+@media screen and (max-width: 450px) {
+  .type {
+    font-size: 1.2rem;
   }
 }
-@media screen and (max-width:300px){
-  .type{
-    font-size:1rem;
+@media screen and (max-width: 300px) {
+  .type {
+    font-size: 1rem;
   }
 }
 
-
-
-
-
-.getStart{
+.getStart {
   position: absolute;
   bottom: 4vh;
   left: 50%;
@@ -100,38 +112,35 @@ body{
   animation: start 5s ease infinite;
   z-index: 99;
 }
-@keyframes start{
+@keyframes start {
   0%,
   25%,
   50%,
   75%,
-  100%{
-    transform: translate(-50%,0);
+  100% {
+    transform: translate(-50%, 0);
   }
 
   15%,
   40%,
   65%,
-  90%{
-    transform: translate(-50%,25%);
+  90% {
+    transform: translate(-50%, 25%);
   }
 }
-.getStart a{
+.getStart a {
   text-decoration: none;
   color: unset;
 }
-.getStart a:hover{
+.getStart a:hover {
   animation: shadow 1.2s infinite;
 }
-@keyframes shadow{
+@keyframes shadow {
   0%,
-  100%{
+  100% {
     text-shadow: 0 0 7px white;
   }
-  50%{
+  50% {
     text-shadow: 0 0 15px white;
   }
 }
-
-
-
