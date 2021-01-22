@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/login.css">
+  <title>login</title>
+</head>
+<body>
+  <form action="../api/check_login.php" method="post">
+    <div class="login">
+      <h1>管理登入</h1>
+      <div>帳號:<input type="text" name="acc" required></div>
+      <div>密碼:<input type="password" name="pw" required></div>
+      <div>
+        <button type="submit">送出</button>
+        <button type="reset">重置</button>
+      </div>
+    </div>
+  </form>
+</body>
+</html>
