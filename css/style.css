@@ -166,6 +166,11 @@ header a.active::after {
   display: inline-block;
 }
 
+#about img{
+  width: 280px;
+  height: 320px;
+}
+
 
 #about, #skill, #education, #experience{
   font-size: 1.2rem;
